@@ -1,0 +1,30 @@
+@import "tools/extends";
+
+@import "components/generic/jumbotron";
+@import "components/generic/post";
+
+@import "components/generic/forms/form-control";
+
+@import "components/global/loading";
+
+@import "components/views/login";
+@import "components/views/editor";
+
+body {
+  background-color: silver;
+}
+
+#tf-home {
+    background-image:url(../03.jpg);
+    background-position:  40% 20%;
+    height: 580px;
+    color: white;
+    text-align: center;
+}
+.homeinfo {
+  margin-top: 200px;
+  font-size: 20px;
+}
+.homep {
+  margin-top: 30px;
+}
