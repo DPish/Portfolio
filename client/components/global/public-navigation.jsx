@@ -5,8 +5,8 @@ PublicNavigation = React.createClass({
       items: {
         right: [
         //  { uid: 'login', href: '/login', label: 'Log In' },
-          { uid: 'about', href: '#tf-about', label: 'About' },
-          { uid: 'contact', href: '#tf-contact', label: 'Contact' }
+        //  { uid: 'about', href: '#tf-about', label: 'About' },
+        //  { uid: 'contact', href: '#tf-contact', label: 'Contact' }
         ]
       }
     };

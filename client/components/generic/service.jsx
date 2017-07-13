@@ -28,7 +28,9 @@ Service = React.createClass({
                       <div className="hover-text off">
                           { this.getServiceTitle() }
                       </div>
-                      { this.renderImg( service.imgUrl ) }
+                    <a href="#" title={ service.title }>
+                        { this.renderImg( service.imgUrl ) }
+                      </a>
                       <p>Lorem ipsum dolor sit amet, diam pede tortor ut, proin commodo sed vel, risus magnis sed lectus.</p>
                 </div>
               </div>
