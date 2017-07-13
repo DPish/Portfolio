@@ -1,25 +1,26 @@
 ServiceEditor = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
-    Meteor.subscribe( 'serviceeditor', this.props.service );
+    Meteor.subscribe('serviceeditor', this.props.service);
 
     return {
-      service: Services.findOne( { _id: this.props.service } )
+      service: Services.findOne({ _id: this.props.service })
     };
   },
+
   validations() {
     let component = this;
 
     return {
       rules: {
         serviceTitle: {
-          required: true
-        }
+          required: true,
+        },
       },
       messages: {
         serviceTitle: {
-          required: "Hang on there, a service title is required!"
-        }
+          required: "Hang on there, a service title is required!",
+        },
       },
       submitHandler() {
         let { getValue, isChecked } = ReactHelpers;
@@ -27,62 +28,66 @@ ServiceEditor = React.createClass({
         let form = component.refs.editServiceForm.refs.form,
             service = {
               _id: component.props.service,
-              title: getValue( form, '[name="serviceTitle"]' ),
-              label: getValue( form, '[name="serviceLabel"]' ),
-              painting: getValue( form, '[name="servicePainting"]' ),
-              imgUrl: getValue( form, '[name="serviceImg"]' ),
-              slug: getValue( form, '[name="serviceSlug"]' ),
-              published: isChecked( form, '[name="servicePublished"]' ),
+              title: getValue(form, '[name="serviceTitle"]'),
+              label: getValue(form, '[name="serviceLabel"]'),
+              web: getValue(form, '[name="serviceWeb"]'),
+              painting: getValue(form, '[name="servicePainting"]'),
+              imgUrl: getValue(form, '[name="serviceImg"]'),
+              slug: getValue(form, '[name="serviceSlug"]'),
+              published: isChecked(form, '[name="servicePublished"]'),
+
             };
 
-        Meteor.call( 'saveService', service, ( error, response ) => {
-          if ( error ) {
-            Bert.alert( error.reason, 'danger' );
+        Meteor.call('saveService', service, (error, response) => {
+          if (error) {
+            Bert.alert(error.reason, 'danger');
           } else {
-            FlowRouter.go( `/services` );
-            Bert.alert( 'Service saved!', 'success' );
+            FlowRouter.go(`/services`);
+            Bert.alert('Service saved!', 'success');
           }
         });
-      }
+      },
     };
   },
-  generateSlug( event ) {
+
+  generateSlug(event) {
     let { setValue } = ReactHelpers,
         form         = this.refs.editServiceForm.refs.form,
         title        = event.target.value;
 
-    setValue( form, '[name="serviceSlug"]', getSlug( title, { custom: { "'": "" } } ) );
+    setValue(form, '[name="serviceSlug"]', getSlug(title, { custom: { "'": "" } }));
   },
+
   getLastUpdate() {
-    if ( this.data ) {
+    if (this.data) {
       let { formatLastUpdate } = ReactHelpers,
           service                 = this.data.service;
 
-      return `${ formatLastUpdate( service.updated ) }`;
+      return `${formatLastUpdate(service.updated)}`;
     }
   },
+
   handleRemoveService(e) {
     e.preventDefault();
 
-    Meteor.call( 'removeService', this.data.service._id, ( error, response ) => {
-      if ( error ) {
-        Bert.alert( error.reason, 'danger' );
+    Meteor.call('removeService', this.data.service._id, (error, response) => {
+      if (error) {
+        Bert.alert(error.reason, 'danger');
       } else {
-        FlowRouter.go( `/services` );
-        Bert.alert( 'Service deleted!', 'success' );
-
+        FlowRouter.go(`/services`);
+        Bert.alert('Service deleted!', 'success');
 
       }
     });
 
-
   },
 
-  handleSubmit( event ) {
+  handleSubmit(event) {
     event.preventDefault();
   },
+
   render() {
-    if ( !this.data.service ) { return <div />; }
+    if (!this.data.service) { return <div />; }
 
     return <GridRow>
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -139,6 +144,17 @@ ServiceEditor = React.createClass({
               showLabel={ false }
               style="input"
               type="text"
+              name="serviceWeb"
+              label="Web"
+              defaultValue={ this.data.service && this.data.service.web }
+            />
+          </FormGroup>
+
+          <FormGroup>
+            <FormControl
+              showLabel={ false }
+              style="input"
+              type="text"
               name="serviceImg"
               label="Img"
               defaultValue={ this.data.service && this.data.service.imgUrl }
@@ -157,6 +173,8 @@ ServiceEditor = React.createClass({
           </FormGroup>
 
 
+
+
           <FormGroup>
             <SuccessButton type="submit" label="Save Service" />
           </FormGroup>
@@ -167,5 +185,5 @@ ServiceEditor = React.createClass({
         </Form>
       </GridColumn>
     </GridRow>;
-  }
+  },
 });

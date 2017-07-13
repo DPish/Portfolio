@@ -57,9 +57,14 @@ let ServicesSchema = new SimpleSchema({
   },
   "imgUrl": {
     type:  String,
-    label: "Enter img url",
+    label: 'Enter img url',
+    optional: true,
+  },
+  "web": {
+    type:  String,
+    label: "Enter web url",
     optional: true
-  }
+  },
 });
 
 Services.attachSchema( ServicesSchema );
