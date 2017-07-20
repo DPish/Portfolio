@@ -22,30 +22,6 @@ Footer = React.createClass({
         fontlink: 'fa fa-instagram',
         newLink: ''
       },
-      {
-        name: 'E-Mail',
-        link: '#',
-        fontlink: 'fa fa-envelope',
-        newLink: ''
-      },
-      {
-        name: 'Soundcloud',
-        link: '#',
-        fontlink: 'fa fa-soundcloud',
-        newLink: ''
-      },
-      {
-        name: 'Youtube',
-        link: '#',
-        fontlink: 'fa fa-youtube',
-        newLink: ''
-      },
-      {
-        name: 'Beatport',
-        link: '#',
-        fontlink: 'fa fa-headphones',
-        newLink: ''
-      }
     ]
 
     const socialmedia = sociallinks.map((sociallinks) =>
