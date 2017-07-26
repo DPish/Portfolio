@@ -10,13 +10,19 @@
 @import "components/views/login";
 @import "components/views/editor";
 
+.app-root {
+    width: 2800;
+}
 body {
   background-color: silver;
+  width: 100%;
 }
 
 #tf-home {
+  width: 100%;
     background-image:url(../03.jpg);
     background-position:  40% 20%;
+    	overflow-x:hidden;
     height: 580px;
     color: white;
     text-align: center;
@@ -27,4 +33,14 @@ body {
 }
 .homep {
   margin-top: 30px;
+
+}
+
+
+#tf-services {
+    background-image:url(../07.jpg);
+        background-repeat: no-repeat;
+    height: 580px;
+    text-align: center;
+      color: white;
 }

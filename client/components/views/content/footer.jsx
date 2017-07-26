@@ -6,36 +6,38 @@ Footer = React.createClass({
     const sociallinks = [
       {
         name: 'Facebook',
-        link: '#',
-        fontlink: 'fa fa-facebook',
-        newLink: ''
+        link: 'https://www.facebook.com/david.pishchik',
+        fontlink: 'fa fa-envelope fa-5x',
+        newLink: 'https://www.facebook.com/david.pishchik'
       },
       {
-        name: 'Twitter',
-        link: '#',
-        fontlink: 'fa fa-twitter',
-        newLink: ''
+        name: 'GitHub',
+        link: 'https://github.com/DPish',
+        fontlink: 'fa fa-github fa-5x',
+        newLink: 'https://github.com/DPish'
       },
       {
         name: 'instagram',
-        link: '#',
-        fontlink: 'fa fa-instagram',
-        newLink: ''
+        link: 'https://www.instagram.com/dave_pish/',
+        fontlink: 'fa fa-instagram fa-5x',
+        newLink: 'https://www.instagram.com/dave_pish/'
       },
     ]
 
     const socialmedia = sociallinks.map((sociallinks) =>
-      <li><a href={sociallinks.link}><i className={sociallinks.fontlink} /></a></li>
+      <li>
+      <a href={sociallinks.link}  target="_blank">
+        <i className={sociallinks.fontlink} />
+      </a>
+      </li>
     );
 
     return (
-      <div id="tf-footer">
-          <div className="container">
-              <p className="pull-left">© 2017 Painting Co. All rights reserved.</p>
-              <ul className="list-inline social pull-right">
-                  {socialmedia} &nbsp; &nbsp;
-              </ul>
-          </div>
+      <div id="tf-footer"  className="container">
+
+          <ul className="list-inline social">
+              {socialmedia}
+          </ul>
       </div>
 
     );

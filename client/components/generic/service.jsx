@@ -32,7 +32,6 @@ Service = React.createClass({
                       >
                         { this.renderImg( service.imgUrl ) }
                       </a>
-                      <p>Lorem ipsum dolor sit amet, diam pede tortor ut, proin commodo sed vel, risus magnis sed lectus.</p>
                 </div>
               </div>
           </div>

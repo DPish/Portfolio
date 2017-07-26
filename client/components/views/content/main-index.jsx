@@ -42,18 +42,19 @@ MainIndex = React.createClass({
         <GridColumn className="col-md-12">
 
 
-          <Header />
-        <div className="container">
+      <Header />
 
-          <h2> Services </h2>
+       <div id="tf-services" className="container-fluid">
+          <h2> Projects</h2>
+          <p> Below are some previous pojects on my portfolio </p>
+
           {this.renderServices()}<br />
 
        </div>
-    
-          <Footer /><br />
 
+          <Footer /><br />
         </GridColumn>
-      </GridRow>
+</GridRow>
     </div>;
   }
 });
