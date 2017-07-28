@@ -22,16 +22,19 @@ Service = React.createClass({
 
     return <div className="service">
 
-          <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 nopadding">
-              <div className="box">
-                  <div className="hover-bg">
-                      <div className="hover-text off">
-                          { this.getServiceTitle() }
-                      </div>
-                    <a href={service.web} title={ service.web } target="_blank"
-                      >
+          <div  id="portfolio-content" className="col-xs-12 col-sm-6 col-md-4 col-lg-4 nopadding">
+              <div className="portfolio-page">
+                  <div className="portfolio-group">
+                    <a className="portfolio-item" href={service.web} title={ service.web } target="_blank">
                         { this.renderImg( service.imgUrl ) }
-                      </a>
+                        <div className="detail">
+                          <h3>Wavy Road</h3>
+                          <p>Duis ac laoreet .</p>
+                          <span className="btn">View</span>
+                        </div>
+
+                    </a>
+
                 </div>
               </div>
           </div>

@@ -29,12 +29,15 @@ ServicesList = React.createClass({
   },
   render() {
     return <GridRow>
-      <br />
-      <br />
-      <br />
+
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
-        <SuccessButton type="button" label="New Service" onClick={ this.handleNewService } />
+        <br />
+        <br />
+        <br />
+
+
         <PageHeader size="h4" label="Services" />
+          <SuccessButton type="button" label="New Service" onClick={ this.handleNewService } />
         { this.renderServicesList() }
       </GridColumn>
     </GridRow>;
