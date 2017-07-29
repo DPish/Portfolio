@@ -25,19 +25,25 @@ Footer = React.createClass({
     ]
 
     const socialmedia = sociallinks.map((sociallinks) =>
-      <li>
+
       <a href={sociallinks.link}  target="_blank">
         <i className={sociallinks.fontlink} />
       </a>
-      </li>
+  
     );
 
     return (
       <div id="tf-footer"  className="container">
+        <div className="col-md-4">
 
-          <ul className="list-inline social">
-              {socialmedia}
-          </ul>
+        </div>
+        <div className="col-md-4">
+          {socialmedia}
+        </div>
+        <div className="col-md-4">
+
+        </div>
+
       </div>
 
     );
