@@ -43,10 +43,10 @@ MainIndex = React.createClass({
 
 
       <Header />
+      <br />
 
        <div id="tf-services" className="container-fluid">
-          <h2> Projects</h2>
-          <p> Below are some previous pojects on my portfolio </p>
+          <h2> Previous Projects</h2>
 
           {this.renderServices()}<br />
 
