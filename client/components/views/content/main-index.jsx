@@ -52,6 +52,70 @@ MainIndex = React.createClass({
 
        </div>
 
+
+       <div>
+<a id="What_We_Offer"></a>
+<div className="row" id="WhatWeOffer">
+<div className="container">
+<div className="wow slideInLeft">
+   <div className="row">
+       <div className="wow pulse animated" data-wow-delay="300ms" data-wow-duration="2s" >
+           <div className="product_head">What We Offer</div>
+       </div>
+       <div className="col-md-4 col-sm-6 products ">
+           <h2>
+               <a><span className="glyphicon glyphicon-stats"></span></a>&nbsp;&nbsp;Product 1</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+       <div className="col-md-4 col-sm-6 products ">
+           <h2>
+               <a><span className="glyphicon glyphicon-road"></span></a>&nbsp;&nbsp;Product 2</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+       <div className="col-md-4 col-sm-6 products  ">
+           <h2>
+               <a><span className="glyphicon glyphicon-refresh"></span></a>&nbsp;&nbsp;Product 3</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+       <div className="col-md-4 col-sm-6 products ">
+           <h2>
+               <a><span className="glyphicon glyphicon-fire"></span></a>&nbsp;&nbsp;Product 4</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+       <div className="col-md-4 col-sm-6 products  ">
+           <h2>
+               <a><span className="glyphicon glyphicon-bullhorn"></span></a>&nbsp;&nbsp;Product 5</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+       <div className="col-md-4 col-sm-6 products  ">
+           <h2>
+               <a><span className="glyphicon glyphicon-time"></span></a>&nbsp;&nbsp;Product 6</h2>
+           <p>
+               Maxime, quis, animi, ad quasi adipisci suscipit alias iste reprehenderit ea placeat nulla commodi nobis magnam provident veniam earum odit eveniet possimus aut voluptatum dolorum culpa necessitatibus facere totam quisquam. Ipsam.
+           </p>
+       </div>
+
+   </div>
+</div>
+</div>
+</div>
+</div>
+
           <Footer /><br />
         </GridColumn>
 </GridRow>

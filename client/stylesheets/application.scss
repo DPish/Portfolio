@@ -18,6 +18,27 @@ body {
 
   width: 100%;
 }
+.pulse{
+   data-wow-delay:300ms;
+    data-wow-duration:2s;
+  visibility: visible;
+  -webkit-animation-duration: 2s;
+   -webkit-animation-delay: 300ms;
+   -webkit-animation-iteration-count: infinite;
+
+}
+
+.slideInLeft{
+
+ data-wow-duration:10s;
+  data-wow-delay:5s;
+  data-wow-offset: 10;
+  data-wow-iteration: 10;
+  -webkit-animation: slide 0.5s forwards;
+     -webkit-animation-delay: 2s;
+     animation: slide 0.5s forwards;
+     animation-delay: 2s;
+ }
 
 #tf-home {
   width: 100%;
@@ -64,6 +85,7 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
 
 /* --------------------------------
 
@@ -117,6 +139,7 @@ Modules - reusable parts of our design
   display: table;
   clear: both;
 }
+
 
 /* --------------------------------
 

@@ -8,6 +8,9 @@ var _setEnvironmentVariables = () => Modules.server.setEnvironmentVariables();
 
 var _setBrowserPolicies = () => {
   BrowserPolicy.content.allowImageOrigin("*");
+  BrowserPolicy.content.allowFrameOrigin("*");
+  BrowserPolicy.content.allowInlineScripts("*");
+  BrowserPolicy.content.allowFontDataUrl("*");
 };
 
 var _generateAccounts = () => Modules.server.generateAccounts();
