@@ -19,18 +19,16 @@ body {
   width: 100%;
 }
 .pulse{
-   data-wow-delay:300ms;
-    data-wow-duration:2s;
+  data-wow-delay:300ms;
+  data-wow-duration:2s;
   visibility: visible;
   -webkit-animation-duration: 2s;
    -webkit-animation-delay: 300ms;
    -webkit-animation-iteration-count: infinite;
 
 }
-
 .slideInLeft{
-
- data-wow-duration:10s;
+  data-wow-duration:10s;
   data-wow-delay:5s;
   data-wow-offset: 10;
   data-wow-iteration: 10;
@@ -49,19 +47,41 @@ body {
     color: white;
     text-align: center;
 }
+
 .homeh{
-    font-family: "Georgia", serif;
+  font-family: "Georgia", serif;
   font-size: 65px;
 }
 .homeinfo{
-  margin-top: 125px;
-
+  margin-top: 75px;
 }
 .homep {
-    font-family: "Georgia", serif;
-  margin-top: 75px;
+  font-family: "Georgia", serif;
+  margin-top: 15px;
+
   font-size: 30px;
 
+}
+.leftSide{
+  margin-right: 600px;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
+.middle{
+  margin-left: 550px;
+
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+
+}
+.rightSide{
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  margin-right: 300px;
+}
+.servicetitle{
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
 }
 
 
